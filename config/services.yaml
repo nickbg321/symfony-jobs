@@ -20,6 +20,16 @@ services:
             - '../src/Entity/'
             - '../src/Kernel.php'
             - '../src/Tests/'
+            - '../src/Value/'
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+
+    App\Service\JsonCronProvider:
+        arguments:
+            $configFile: '%kernel.project_dir%/cron.json'
+
+    App\Command\CronRunCommand:
+        arguments:
+            $environment: '%kernel.environment%'
+            $projectDir: '%kernel.project_dir%'

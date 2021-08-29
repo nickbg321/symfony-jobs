@@ -1,0 +1,17 @@
+[
+  {
+    "command": "secrets:list",
+    "schedule": "* * * * *",
+    "environments": ["all"]
+  },
+  {
+    "command": "lint:container",
+    "schedule": "5 4 * * *",
+    "environments": ["all"]
+  },
+  {
+    "command": "lint:yaml",
+    "schedule": "*/2 * * * *",
+    "environments": ["production", "staging"]
+  }
+]
