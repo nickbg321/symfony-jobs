@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Value;
+namespace App\Job\Value;
 
 final class Cron
 {

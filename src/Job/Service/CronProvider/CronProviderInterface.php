@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Service;
+namespace App\Job\Service\CronProvider;
 
-use App\Value\Cron;
+use App\Job\Value\Cron;
 
 interface CronProviderInterface
 {
